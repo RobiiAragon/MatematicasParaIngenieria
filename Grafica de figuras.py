@@ -1,3 +1,6 @@
+# ==========================================
+# Aragón Lopez Jesus Roberto, Lopez Martinez Diana Carolina
+# ==========================================
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Button
