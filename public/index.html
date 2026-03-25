@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curvas Parametricas 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="kicker">Matematicas Para Ingenieria</p>
+      <h1>Ecuaciones Parametricas Representativas</h1>
+      <p class="subtitle">Visualizacion 3D interactiva con navegacion por figuras</p>
+    </header>
+
+    <section class="viewer-card">
+      <div class="viewer-head">
+        <h2 id="curveTitle">Cargando...</h2>
+        <span id="curveCounter" class="counter"></span>
+      </div>
+
+      <p id="curveEquation" class="equation"></p>
+
+      <div id="plot" class="plot"></div>
+
+      <div class="controls">
+        <button id="prevBtn" aria-label="Figura anterior">&#8592; Anterior</button>
+        <button id="nextBtn" aria-label="Figura siguiente">Siguiente &#8594;</button>
+      </div>
+
+      <p class="hint">Tip: tambien puedes usar las flechas del teclado (izquierda/derecha).</p>
+    </section>
+
+    <footer class="authors">
+      <h3>Autores</h3>
+      <p>ARAGON LOPEZ JESUS ROBERTO</p>
+      <p>LOPEZ MARTINEZ DIANA CAROLINA</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
