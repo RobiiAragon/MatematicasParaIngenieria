@@ -222,3 +222,65 @@ button:active {
     grid-template-columns: 1fr;
   }
 }
+
+.params-box {
+  margin: 14px 0 0;
+  padding: 10px 14px 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.params-box legend {
+  padding: 0 6px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.params {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px 18px;
+}
+
+.param {
+  display: grid;
+  grid-template-columns: 1.6em 1fr 3.4em;
+  align-items: center;
+  gap: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.param input {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.param output {
+  text-align: right;
+  color: var(--accent-strong);
+}
+
+button.reset {
+  margin-top: 10px;
+  min-width: 0;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+button:focus-visible,
+.source-btn:focus-visible,
+.param input:focus-visible {
+  outline: 3px solid #ff6b35;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

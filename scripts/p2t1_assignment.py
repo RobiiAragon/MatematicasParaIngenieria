@@ -57,7 +57,7 @@ def grafica_pendiente_3d():
     y_tan = np.full_like(t, y0) # y se mantiene constante
     z_tan = z0 + 2 * t          # pendiente es 2
 
-    ax.plot(x_tan, y_tan, z_tan, color='red', linewidth=3, label='Pendiente en dir. $x$ ($\partial f/\partial x$)')
+    ax.plot(x_tan, y_tan, z_tan, color='red', linewidth=3, label=r'Pendiente en dir. $x$ ($\partial f/\partial x$)')
     ax.scatter([x0], [y0], [z0], color='black', s=50)
 
     ax.set_title('2. Derivada parcial como Pendiente en 3D')
