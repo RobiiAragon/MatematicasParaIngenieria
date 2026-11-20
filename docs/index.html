@@ -3,37 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curvas Parametricas 3D</title>
+  <title>Curvas Paramétricas 3D · Matemáticas para Ingeniería</title>
+  <meta name="description" content="Visualizador 3D interactivo de curvas paramétricas (cicloide esférica, anillos sinusoidales, hélice esférica y rosa cónica) con parámetros ajustables." />
+  <meta property="og:title" content="Curvas Paramétricas 3D" />
+  <meta property="og:description" content="Visualizador 3D interactivo de curvas paramétricas con parámetros ajustables." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://robiiaragon.github.io/MatematicasParaIngenieria/" />
+  <meta name="theme-color" content="#0d6e6e" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%88%AE%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script defer src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script defer src="app.js"></script>
 </head>
 <body>
   <main class="page">
     <header class="hero">
-      <p class="kicker">Matematicas Para Ingenieria</p>
-      <h1>Ecuaciones Parametricas Representativas</h1>
-      <p class="subtitle">Visualizacion 3D interactiva con navegacion por figuras</p>
+      <p class="kicker">Matemáticas Para Ingeniería</p>
+      <h1>Ecuaciones Paramétricas Representativas</h1>
+      <p class="subtitle">Visualización 3D interactiva con navegación por figuras</p>
     </header>
 
     <section class="viewer-card">
       <div class="viewer-head">
-        <h2 id="curveTitle">Cargando...</h2>
+        <h2 id="curveTitle" aria-live="polite">Cargando…</h2>
         <span id="curveCounter" class="counter"></span>
       </div>
 
       <p id="curveEquation" class="equation"></p>
 
-      <div id="plot" class="plot"></div>
+      <div id="plot" class="plot" role="img" aria-label="Gráfica 3D"></div>
+
+      <fieldset class="params-box">
+        <legend>Parámetros</legend>
+        <div id="params" class="params"></div>
+        <button id="resetBtn" type="button" class="reset">Restablecer</button>
+      </fieldset>
 
       <div class="controls">
-        <button id="prevBtn" aria-label="Figura anterior">&#8592; Anterior</button>
-        <button id="nextBtn" aria-label="Figura siguiente">Siguiente &#8594;</button>
+        <button id="prevBtn" type="button" aria-label="Figura anterior">&#8592; Anterior</button>
+        <button id="nextBtn" type="button" aria-label="Figura siguiente">Siguiente &#8594;</button>
       </div>
 
-      <p class="hint">Tip: tambien puedes usar las flechas del teclado (izquierda/derecha).</p>
+      <p class="hint">Tip: también puedes usar las flechas del teclado (izquierda/derecha). Cada figura tiene su propio enlace (#cicloide, #anillos, #helice, #rosa).</p>
     </section>
 
     <footer class="authors">
@@ -44,15 +58,13 @@
       </div>
       <a
         class="source-btn"
-        href="https://github.com/RobiiAragon/MatematicasParaIngenieria/blob/main/Grafica%20de%20figuras.py"
+        href="https://github.com/RobiiAragon/MatematicasParaIngenieria/blob/main/scripts/parametric_curves_3d.py"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Codigo fuente
+        Código fuente
       </a>
     </footer>
   </main>
-
-  <script src="app.js"></script>
 </body>
 </html>
